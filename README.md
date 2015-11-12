@@ -5,7 +5,7 @@
 </div>
 <br>
 
-> simple_ass_prompt theme for [Oh My Fish][omf-link].
+> simple-ass-prompt theme for [Oh My Fish][omf-link].
 
 ## Install
 
@@ -54,7 +54,7 @@ VirtualFish Usage
 
 [mit]:            http://opensource.org/licenses/MIT
 [author]:         http://github.com/lfiolhais
-[contributors]:   https://github.com/lfiolhais/simple_ass_prompt/graphs/contributors
+[contributors]:   https://github.com/lfiolhais/theme-simple-ass-prompt/graphs/contributors
 [omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
 [mths]: https://github.com/mathiasbynens/dotfiles
 [license-badge]:  https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square
