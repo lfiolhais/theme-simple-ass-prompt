@@ -42,12 +42,12 @@ Right side:
 ## Screenshot
 Git Usage
 <p align="center">
-<img src="simple_ass_prompt.png">
+<img src="http://cl.ly/image/1I2L3D1y2z3J/simple_ass_prompt.png">
 </p>
 
-VirtualFish Usage
+[VirtualFish][vf] Usage
 <p align="center">
-<img src="simple_ass_prompt_virtual.png">
+<img src="http://cl.ly/image/1Y36043M2U3M/simple_ass_prompt_virtual.png">
 </p>
 
 # License
@@ -61,3 +61,4 @@ VirtualFish Usage
 [omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
 [mths]: https://github.com/mathiasbynens/dotfiles
 [license-badge]:  https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square
+[vf]: https://github.com/adambrenecki/virtualfish
