@@ -5,13 +5,13 @@
 </div>
 <br>
 
-> simple-ass-prompt theme for [Oh My Fish][omf-link].
+> simple_ass_prompt theme for [Oh My Fish][omf-link].
 
 ## Install
 
 
 ```fish
-$ omf install simple-ass-prompt
+$ omf theme simple_ass_prompt
 ```
 
 ## Features
@@ -36,15 +36,18 @@ The changes made are the following:
 - The branch has diverged from upstream `±`
 - Support for Pythons virtual environments
 
+Right side:
+- The last command failed is displayed by '✘'
+
 ## Screenshot
 Git Usage
 <p align="center">
-<img src="http://cl.ly/image/1I2L3D1y2z3J/simple_ass_prompt.png">
+<img src="simple_ass_prompt.png">
 </p>
 
 VirtualFish Usage
 <p align="center">
-<img src="http://cl.ly/image/1Y36043M2U3M/simple_ass_prompt_virtual.png">
+<img src="simple_ass_prompt_virtual.png">
 </p>
 
 # License
@@ -54,7 +57,7 @@ VirtualFish Usage
 
 [mit]:            http://opensource.org/licenses/MIT
 [author]:         http://github.com/lfiolhais
-[contributors]:   https://github.com/lfiolhais/theme-simple-ass-prompt/graphs/contributors
+[contributors]:   https://github.com/lfiolhais/simple_ass_prompt/graphs/contributors
 [omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
 [mths]: https://github.com/mathiasbynens/dotfiles
 [license-badge]:  https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square
