@@ -82,7 +82,6 @@ function fish_prompt
   printf ' at '
 
   # Machine logged in to
-
   __simple_ass_prompt_get_host
   set_color normal
   printf ' in '
