@@ -65,6 +65,15 @@ function __simple_ass_prompt_get_user -d "Print the user"
   printf '%s' (whoami)
 end
 
+function __simple_ass_prompt_get_host -d "Get Hostname"
+  if test $SSH_TTY
+    tput bold
+    set_color red
+  else
+    set_color af8700
+  end
+  printf '%s' (hostname|cut -d . -f 1)
+end
 
 function fish_prompt
   # Logged in user
@@ -73,8 +82,8 @@ function fish_prompt
   printf ' at '
 
   # Machine logged in to
-  set_color af8700
-  printf '%s' (hostname|cut -d . -f 1)
+
+  __simple_ass_prompt_get_host
   set_color normal
   printf ' in '
 
