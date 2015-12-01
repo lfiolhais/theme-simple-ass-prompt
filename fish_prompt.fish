@@ -56,11 +56,19 @@ function __simple_ass_prompt_git -d "Display the actual git branch"
   end
 end
 
+function __simple_ass_prompt_get_user -d "Print the user"
+  if test $USER = 'root'
+    set_color red
+  else
+    set_color d75f00
+  end
+  printf '%s' (whoami)
+end
+
 
 function fish_prompt
   # Logged in user
-  set_color d75f00
-  printf '%s' (whoami)
+  __simple_ass_prompt_get_user
   set_color normal
   printf ' at '
 
