@@ -11,21 +11,15 @@ set __fish_git_prompt_char_dirtystate '!'
 set __fish_git_prompt_char_untrackedfiles '☡'
 set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_cleanstate '✓'
-set __fish_git_prompt_char_touched '$'
 
 function __simple_ass_prompt_parse_git_branch_state -d "Display the state of the branch"
   git update-index --really-refresh -q 1> /dev/null
 
-  # Check dirty state
-  if git_is_dirty
-    echo -n "$__fish_git_prompt_char_dirtystate"
-  else
-    echo -n "$__fish_git_prompt_char_cleanstate"
-  end
-
   # Check for changes to be commited
   if git_is_touched
-    echo -n "$__fish_git_prompt_char_touched"
+    echo -n "$__fish_git_prompt_char_cleanstate"
+  else
+    echo -n "$__fish_git_prompt_char_dirtystate"
   end
 
   # Check for untracked files
