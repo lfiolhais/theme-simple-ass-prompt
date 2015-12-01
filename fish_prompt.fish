@@ -43,7 +43,9 @@ function __simple_ass_prompt_git -d "Display the actual git branch"
   if git_is_repo
     printf 'on '
     set_color purple
+
     set git_branch (command git symbolic-ref --quiet --short HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null || echo -n '(unknown)')
+
     printf '%s ' $git_branch
 
     set state (__simple_ass_prompt_parse_git_branch_state)
