@@ -11,7 +11,7 @@
 
 
 ```fish
-$ omf theme simple-ass-prompt
+$ omf install simple-ass-prompt
 ```
 
 ## Features
