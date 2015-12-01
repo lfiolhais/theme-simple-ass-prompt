@@ -25,7 +25,7 @@ function __simple_ass_prompt_parse_git_branch_state -d "Display the state of the
 
   # Check for changes to be commited
   if git_is_touched
-    echp -n "$__fish_git_prompt_char_touched"
+    echo -n "$__fish_git_prompt_char_touched"
   end
 
   # Check for untracked files
