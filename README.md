@@ -5,13 +5,13 @@
 </div>
 <br>
 
-> simple_ass_prompt theme for [Oh My Fish][omf-link].
+> simple-ass-prompt theme for [Oh My Fish][omf-link].
 
 ## Install
 
 
 ```fish
-$ omf theme simple_ass_prompt
+$ omf theme simple-ass-prompt
 ```
 
 ## Features
