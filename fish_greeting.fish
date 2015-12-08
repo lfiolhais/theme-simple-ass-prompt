@@ -1,12 +1,5 @@
-# Set global color styles, for example:
-#
-# function simple_ass_prompt_error
-#   set_color -o red
-# end
-#
-# function simple_ass_prompt_normal
-#   set_color normal
-#
+# Configure greeting with:
+#   -> set -g simple_ass_prompt_greeting MyGreeting
 
 function fish_greeting
   if test -n "$simple_ass_prompt_greeting"
