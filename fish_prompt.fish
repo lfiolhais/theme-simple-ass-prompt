@@ -23,7 +23,7 @@ function __simple_ass_prompt_parse_git_branch_state -d "Display the state of the
   end
 
   # Check for untracked files
-  set git_untracked (command git ls-files --others --exclude-standard 2> /dev/null)
+  set -l git_untracked (command git ls-files --others --exclude-standard 2> /dev/null)
   if [ -n "$git_untracked" ]
     echo -n "$__fish_git_prompt_char_untrackedfiles"
   end
@@ -44,7 +44,7 @@ function __simple_ass_prompt_git -d "Display the actual git branch"
     printf 'on '
     set_color purple
 
-    set git_branch (command git symbolic-ref --quiet --short HEAD 2> /dev/null; or git rev-parse --short HEAD 2> /dev/null; or echo -n '(unknown)')
+    set -l git_branch (command git symbolic-ref --quiet --short HEAD 2> /dev/null; or git rev-parse --short HEAD 2> /dev/null; or echo -n '(unknown)')
 
     printf '%s ' $git_branch
 
