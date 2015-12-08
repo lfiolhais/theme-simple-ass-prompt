@@ -9,5 +9,9 @@
 #
 
 function fish_greeting
-  echo 'Where the hell is Science?!'
+  if test -n "$simple_ass_prompt_greeting"
+    echo $simple_ass_prompt_greeting
+  else
+    echo 'Where the hell is Science?!'
+  end
 end
