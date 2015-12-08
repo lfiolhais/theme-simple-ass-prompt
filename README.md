@@ -50,6 +50,12 @@ Git Usage
 <img src="http://cl.ly/image/1Y36043M2U3M/simple_ass_prompt_virtual.png">
 </p>
 
+## Configuration
+You can change the greeting message with:
+```fish
+set -g simple_ass_prompt_greeting MyGreeting
+```
+
 # License
 
 [MIT][mit] © [lfiolhais][author] et [al][contributors]
