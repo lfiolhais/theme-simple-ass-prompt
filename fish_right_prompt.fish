@@ -7,4 +7,6 @@ function fish_right_prompt
     set_color red
     printf '%s' $__fish_status_prompt_char_failed
   end
+
+  set_color normal
 end
