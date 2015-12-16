@@ -43,7 +43,7 @@ Right side:
 ## Screenshot
 Git Usage
 <p align="center">
-<img src="http://cl.ly/image/1I2L3D1y2z3J/simple_ass_prompt.png">
+<img src="http://cl.ly/1G0Z2j3A0C1Q/Screen%20Recording%202015-12-16%20at%2010.09%20pm.gif">
 </p>
 
 [VirtualFish][vf] Usage
