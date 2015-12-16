@@ -75,6 +75,11 @@ function __simple_ass_prompt_get_host -d "Get Hostname"
   printf '%s' (hostname|cut -d . -f 1)
 end
 
+function __simple_ass_prompt_pwd -d "Get PWD"
+  set_color $fish_color_cwd
+  printf '%s ' (prompt_pwd)
+end
+
 function fish_prompt
   # Logged in user
   __simple_ass_prompt_get_user
@@ -87,8 +92,7 @@ function fish_prompt
   printf ' in '
 
   # Path
-  set_color $fish_color_cwd
-  printf '%s ' (prompt_pwd)
+  __simple_ass_prompt_pwd
   set_color normal
 
   # Git info
