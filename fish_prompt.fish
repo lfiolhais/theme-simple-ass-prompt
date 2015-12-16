@@ -78,7 +78,8 @@ end
 function __simple_ass_prompt_pwd -d "Get PWD"
   set_color $fish_color_cwd
   if git_is_repo
-  set -l git_basename (basename (git rev-parse --show-toplevel))
+    set -l fish_prompt_pwd_dir_length 1
+    set -l git_basename (basename (git rev-parse --show-toplevel))
     set -l prefix (git rev-parse --show-prefix)
     set -l final_pwd (string join '/' $git_basename $prefix | string trim -rc '/' | string replace -ar '(\.?[^/]{'"$fish_prompt_pwd_dir_length"'})[^/]*/' '$1/' $final_pwd)
 
