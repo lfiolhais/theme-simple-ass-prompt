@@ -84,6 +84,7 @@ function __simple_ass_prompt_pwd -d "Get PWD"
     if test $prefix
       printf '/%s' $prefix
     end
+    printf ' '
   else
     printf '%s ' (prompt_pwd)
   end
