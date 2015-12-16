@@ -2,9 +2,7 @@
 #   -> set -g simple_ass_prompt_greeting MyGreeting
 
 function fish_greeting
-  if test -n "$simple_ass_prompt_greeting"
-    echo $simple_ass_prompt_greeting
-  else
-    echo 'Where the hell is Science?!'
-  end
+  set -q simple_ass_prompt_greeting; or set -l simple_ass_prompt_greeting 'Where the hell is Science?!'
+
+  echo $simple_ass_prompt_greeting
 end

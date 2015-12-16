@@ -75,6 +75,8 @@ function __simple_ass_prompt_get_host -d "Get Hostname"
   printf '%s' (hostname|cut -d . -f 1)
 end
 
+# Blatantly plagiarised from prompt_pwd.fish
+# https://github.com/fish-shell/fish-shell/blob/master/share/functions/prompt_pwd.fish
 function __simple_ass_prompt_pwd -d "Get PWD"
   set_color $fish_color_cwd
   if git_is_repo

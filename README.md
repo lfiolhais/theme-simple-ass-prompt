@@ -35,7 +35,7 @@ Features:
 - The branch is behind with `-`
 - The branch has diverged from upstream `±`
 - Support for Pythons virtual environments
-- When in a git repo only the full path relative to that repo is shown
+- When in a git repo only the path relative to that repo is shown
 
 Right side:
 - The last command failed is displayed by `✘`
