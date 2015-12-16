@@ -25,7 +25,7 @@ This is [Mathias Bynens][mths] Bash prompt ported to Fish with a few changed ico
 
 > iTerm → Profiles → Text → use 13pt Monaco with 1.1 vertical spacing.
 
-The changes made are the following:
+Features:
 
 - A dirty state of the branch is displayed by `!`
 - Untracked files are displayed by `☡`
@@ -35,9 +35,10 @@ The changes made are the following:
 - The branch is behind with `-`
 - The branch has diverged from upstream `±`
 - Support for Pythons virtual environments
+- When in a git repo only the full path relative to that repo is shown
 
 Right side:
-- The last command failed is displayed by '✘'
+- The last command failed is displayed by `✘`
 
 ## Screenshot
 Git Usage
