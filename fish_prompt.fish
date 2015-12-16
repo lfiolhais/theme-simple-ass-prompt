@@ -77,7 +77,16 @@ end
 
 function __simple_ass_prompt_pwd -d "Get PWD"
   set_color $fish_color_cwd
-  printf '%s ' (prompt_pwd)
+  if git_is_repo
+    printf '%s' (basename (git rev-parse --show-toplevel))
+
+    set -l prefix (command git rev-parse --show-prefix)
+    if test $prefix
+      printf '/%s' $prefix
+    end
+  else
+    printf '%s ' (prompt_pwd)
+  end
 end
 
 function fish_prompt
