@@ -11,6 +11,7 @@
 
 ## Install
 
+:warning:This theme uses the string built-in which isn't available in fish 2.2.0. If you want to use this theme please consider building fish from master:warning:
 
 ```fish
 $ omf install simple-ass-prompt
