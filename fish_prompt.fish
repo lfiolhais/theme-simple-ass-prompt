@@ -79,15 +79,21 @@ end
 # https://github.com/fish-shell/fish-shell/blob/master/share/functions/prompt_pwd.fish
 function __simple_ass_prompt_pwd -d "Get PWD"
   set_color $fish_color_cwd
-  if git_is_repo
+  set -l std_prompt (prompt_pwd)
+
+  # Need to check if the user is in the .git directory otherwise
+  # git_basename won't return anything. The command `git rev-parse
+  # --show-toplevel` returns the full path relative to the .git
+  # folder. It doesn't return anything if it's run in the .git folder.
+  if git_is_repo; and string match '*/.git' $std_prompt 1>/dev/null
     set -l fish_prompt_pwd_dir_length 1
-    set -l git_basename (basename (git rev-parse --show-toplevel))
     set -l prefix (git rev-parse --show-prefix)
+    set -l git_basename (basename (git rev-parse --show-toplevel))
     set -l final_pwd (string join '/' $git_basename $prefix | string trim -rc '/' | string replace -ar '(\.?[^/]{'"$fish_prompt_pwd_dir_length"'})[^/]*/' '$1/' $final_pwd)
 
     printf '%s ' $final_pwd
   else
-    printf '%s ' (prompt_pwd)
+    printf '%s ' $std_prompt
   end
 end
 
