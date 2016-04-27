@@ -4,6 +4,7 @@ set __fish_git_prompt_char_untrackedfiles '☡'
 set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_cleanstate '✓'
 
+# Display the state of the branch when inside of a git repo
 function __simple_ass_prompt_parse_git_branch_state -d "Display the state of the branch"
   git update-index --really-refresh -q 1> /dev/null
 
@@ -29,7 +30,7 @@ function __simple_ass_prompt_parse_git_branch_state -d "Display the state of the
   git_ahead
 end
 
-
+# Display current git branch
 function __simple_ass_prompt_git -d "Display the actual git branch"
   set -l ref
   set -l std_prompt (prompt_pwd)
@@ -51,6 +52,7 @@ function __simple_ass_prompt_git -d "Display the actual git branch"
   end
 end
 
+# Print current user
 function __simple_ass_prompt_get_user -d "Print the user"
   if test $USER = 'root'
     set_color red
@@ -60,6 +62,7 @@ function __simple_ass_prompt_get_user -d "Print the user"
   printf '%s' (whoami)
 end
 
+# Get Machines Hostname
 function __simple_ass_prompt_get_host -d "Get Hostname"
   if test $SSH_TTY
     tput bold
@@ -93,6 +96,7 @@ function __simple_ass_prompt_pwd -d "Get PWD"
   end
 end
 
+# Simple-ass-prompt
 function fish_prompt
   # Logged in user
   __simple_ass_prompt_get_user
