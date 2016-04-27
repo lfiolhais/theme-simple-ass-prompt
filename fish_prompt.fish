@@ -40,7 +40,10 @@ end
 
 function __simple_ass_prompt_git -d "Display the actual git branch"
   set -l ref
-  if git_is_repo
+  set -l std_prompt (prompt_pwd)
+  set -l is_dot_git (string match '*/.git' $std_prompt)
+
+  if git_is_repo; and test -z $is_dot_git
     printf 'on '
     set_color purple
 
