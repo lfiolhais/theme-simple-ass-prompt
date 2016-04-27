@@ -80,12 +80,13 @@ end
 function __simple_ass_prompt_pwd -d "Get PWD"
   set_color $fish_color_cwd
   set -l std_prompt (prompt_pwd)
+  set -l is_dot_git (string match '*/.git' $std_prompt)
 
   # Need to check if the user is in the .git directory otherwise
   # git_basename won't return anything. The command `git rev-parse
   # --show-toplevel` returns the full path relative to the .git
   # folder. It doesn't return anything if it's run in the .git folder.
-  if git_is_repo; and string match '*/.git' $std_prompt 1>/dev/null
+  if git_is_repo; and test -n $is_dot_git
     set -l fish_prompt_pwd_dir_length 1
     set -l prefix (git rev-parse --show-prefix)
     set -l git_basename (basename (git rev-parse --show-toplevel))
