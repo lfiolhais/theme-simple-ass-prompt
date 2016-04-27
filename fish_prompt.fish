@@ -1,11 +1,3 @@
-# Colors
-set normal (set_color normal)
-set magenta (set_color magenta)
-set purple (set_color purple)
-set green (set_color green)
-set red (set_color red)
-set gray (set_color -o black)
-
 # Status Chars
 set __fish_git_prompt_char_dirtystate '!'
 set __fish_git_prompt_char_untrackedfiles '☡'
