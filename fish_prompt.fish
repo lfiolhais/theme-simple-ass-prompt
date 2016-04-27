@@ -86,7 +86,7 @@ function __simple_ass_prompt_pwd -d "Get PWD"
   # git_basename won't return anything. The command `git rev-parse
   # --show-toplevel` returns the full path relative to the .git
   # folder. It doesn't return anything if it's run in the .git folder.
-  if git_is_repo; and test -n $is_dot_git
+  if git_is_repo; and test -z $is_dot_git
     set -l fish_prompt_pwd_dir_length 1
     set -l prefix (git rev-parse --show-prefix)
     set -l git_basename (basename (git rev-parse --show-toplevel))
