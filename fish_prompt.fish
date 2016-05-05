@@ -98,6 +98,8 @@ end
 
 # Simple-ass-prompt
 function fish_prompt
+  set -l code $status
+
   # Logged in user
   __simple_ass_prompt_get_user
   set_color normal
@@ -121,7 +123,7 @@ function fish_prompt
     printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
   end
 
-  if test $status -eq 127
+  if test $code -eq 127
     set_color red
   end
 
