@@ -120,6 +120,11 @@ function fish_prompt
   if test $VIRTUAL_ENV
     printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
   end
+
+  if test $status -eq 127
+    set_color red
+  end
+
   printf '↪ '
   set_color normal
 end
