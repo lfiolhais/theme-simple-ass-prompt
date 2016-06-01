@@ -76,7 +76,7 @@ end
 # Get Project Working Directory
 function __simple_ass_prompt_pwd -d "Get PWD"
   set_color $fish_color_cwd
-  printf '%s ' $std_prompt
+  printf '%s ' (prompt_pwd)
 end
 
 # Simple-ass-prompt
