@@ -1,4 +1,6 @@
-<img src="https://cdn.rawgit.com/oh-my-fish/oh-my-fish/e4f1c2e0219a17e2c748b824004c8d0b38055c16/docs/logo.svg" align="left" width="144px" height="144px"/>
+<img
+src="https://cdn.rawgit.com/oh-my-fish/oh-my-fish/e4f1c2e0219a17e2c748b824004c8d0b38055c16/docs/logo.svg"
+align="left" width="144px" height="144px"/>
 
 #### simple-ass-prompt
 > A theme for [Oh My Fish][omf-link].
@@ -16,7 +18,8 @@ $ omf install simple-ass-prompt
 ```
 
 ## Features
-This is [Mathias Bynens][mths] Bash prompt ported to Fish with a few changed icons and added functionalities. As he put it:
+This is [Mathias Bynens][mths] Bash prompt ported to Fish with a few changed
+icons and added functionalities. As he put it:
 
 
 > Shell prompt based on the Solarized Dark theme.
@@ -36,6 +39,7 @@ Features:
 - The branch is behind with `-`
 - The branch has diverged from upstream `±`
 - Support for Pythons virtual environments
+- Support Rust active toolchain
 - The last command failed is displayed with `↪` in red
 
 ## Screenshot

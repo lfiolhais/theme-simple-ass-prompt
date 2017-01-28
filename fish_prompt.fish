@@ -102,8 +102,12 @@ function fish_prompt
 
   # Line 2
   echo
+  if test -e "Cargo.toml"
+    printf "(rust:%s) " (set_color red)(rustup show | tail -n 3 | head -n 1 |  cut -d '-' -f 1)(set_color normal)
+  end
+
   if test $VIRTUAL_ENV
-    printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
+    printf "(python:%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
   end
 
   if test $code -eq 127
